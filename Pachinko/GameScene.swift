@@ -8,6 +8,7 @@
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    let balls = ["ballRed", "ballGreen", "ballBlue", "ballCyan", "ballGrey", "ballPurple", "ballYellow"]
     var scoreLabel: SKLabelNode!
     
     var score = 0 {
@@ -16,8 +17,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    var editLabel: SKLabelNode!
+    var limitBallsLabel: SKLabelNode!
     
+    var limitBalls = 5 {
+        didSet {
+            limitBallsLabel.text = "Limit balls: \(limitBalls)"
+        }
+    }
+    
+    var editLabel: SKLabelNode!
+
     var editingMode: Bool = false {
         didSet {
             if editingMode {
@@ -46,6 +55,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.position = CGPoint(x: 980, y: 700)
         addChild(scoreLabel)
         
+        limitBallsLabel = SKLabelNode(fontNamed: "Chalkduster")
+        limitBallsLabel.text = "Limit balls: 5"
+        limitBallsLabel.horizontalAlignmentMode = .center
+        limitBallsLabel.position = CGPoint(x: 580, y: 700)
+        addChild(limitBallsLabel)
+        
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
         
@@ -64,6 +79,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
+        var locationBall = touch.location(in: self)
+        locationBall.y = 700
         let objects = nodes(at: location)
         
         if objects.contains(editLabel) {
@@ -80,11 +97,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
                 addChild(box)
             } else {
-                let ball = SKSpriteNode(imageNamed: "ballRed")
+                guard limitBalls > 0 else { return }
+                limitBalls -= 1
+                let ball = SKSpriteNode(imageNamed: balls.randomElement() ?? "ballRed")
                 ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
                 ball.physicsBody?.restitution = 0.4
                 ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
-                ball.position = location
+                ball.position = locationBall
                 ball.name = "ball"
                 addChild(ball)
             }

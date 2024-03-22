@@ -14,7 +14,7 @@
 		AAA0F49D2BAC5FC800B5DAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA0F49B2BAC5FC800B5DAF2 /* Main.storyboard */; };
 		AAA0F4A22BAC5FCA00B5DAF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA0F4A02BAC5FCA00B5DAF2 /* LaunchScreen.storyboard */; };
 		AAD471502BADA10C00969349 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = AAD4714F2BADA10C00969349 /* FireParticles.sks */; };
-		AAD471522BADA2AA00969349 /* Assets.xcassets 14-17-14-534.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD471512BADA2AA00969349 /* Assets.xcassets 14-17-14-534.xcassets */; };
+		AAD471522BADA2AA00969349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD471512BADA2AA00969349 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		AAA0F49C2BAC5FC800B5DAF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAA0F4A12BAC5FCA00B5DAF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD4714F2BADA10C00969349 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
-		AAD471512BADA2AA00969349 /* Assets.xcassets 14-17-14-534.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets 14-17-14-534.xcassets"; sourceTree = "<group>"; };
+		AAD471512BADA2AA00969349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				AAA0F49B2BAC5FC800B5DAF2 /* Main.storyboard */,
 				AAA0F4A02BAC5FCA00B5DAF2 /* LaunchScreen.storyboard */,
 				AAD4714F2BADA10C00969349 /* FireParticles.sks */,
-				AAD471512BADA2AA00969349 /* Assets.xcassets 14-17-14-534.xcassets */,
+				AAD471512BADA2AA00969349 /* Assets.xcassets */,
 			);
 			path = Pachinko;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA0F49D2BAC5FC800B5DAF2 /* Main.storyboard in Resources */,
-				AAD471522BADA2AA00969349 /* Assets.xcassets 14-17-14-534.xcassets in Resources */,
+				AAD471522BADA2AA00969349 /* Assets.xcassets in Resources */,
 				AAD471502BADA10C00969349 /* FireParticles.sks in Resources */,
 				AAA0F4942BAC5FC800B5DAF2 /* GameScene.sks in Resources */,
 				AAA0F4A22BAC5FCA00B5DAF2 /* LaunchScreen.storyboard in Resources */,
